@@ -28,6 +28,15 @@ $(document).ready(function () {
             }
         });
     });
+    
+    document.getElementById('emailform').onkeypress = function (e) {
+        if (!e) e = window.event;
+        var keyCode = e.keyCode || e.which;
+        if (keyCode == '13') {
+            sendMail($('#emailform').val());
+        }
+    }
+    
     document.getElementById('questionIn').onkeypress = function (e) {
         if (!e) e = window.event;
         var keyCode = e.keyCode || e.which;

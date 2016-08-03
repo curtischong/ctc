@@ -126,6 +126,23 @@ body{
 #questionIn:focus {
     outline: none;
 }
+#emailform{
+    width: 100%;
+    padding: 5px;
+    
+    border: 1px solid #35DB96;
+    border-bottom: 1px solid white;
+    margin-top: 50px;
+    position: relative;
+    color: white;
+    background-color: #35DB96;
+    text-decoration: none;
+}#emailform:focus {
+    outline: none;
+}
+
+
+
 ::-webkit-input-placeholder {
    color: white;
 }
@@ -149,7 +166,6 @@ body{
     text-align: center;
     display: none;
     margin-top: 80px;
-    cursor: pointer;
     font-size: 23px;
 }
 #incorrectAnswer{
