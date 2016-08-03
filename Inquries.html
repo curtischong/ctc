@@ -1,0 +1,42 @@
+<html>
+    <body>
+        
+        
+            <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <input type="text" id="questionIn" placeholder="Please, ask as anything">
+        <div id="incorrectAnswer" style="display: none; height: position: absolute; top: 40px;background-color: blue;">Incorrect Answer?</div>
+        <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).ready(function() {
+            document.getElementById('questionIn').onkeypress = function(e) {
+                if (!e) e = window.event;
+                var keyCode = e.keyCode || e.which;
+                if (keyCode == '13') {
+                    var question = $("#questionIn").val().toLowerCase();
+                    if (question.indexOf("what") !=-1) {
+                        $("#incorrectAnswer").fadeIn(400);
+                    }else{
+                        sendMail(question)
+                    }
+                }
+            }
+            $("#incorrectAnswer").on("click",function(){
+                sendMail($("#questionIn").val().toLowerCase());
+            })
+            var sendMail = function(body){
+                window.location.href = "mailto:mail@example.org?body="+body;
+            };
+        });
+    </script>
+</body>
+</html>
