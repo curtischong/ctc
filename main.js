@@ -9,15 +9,14 @@ $(document).ready(function () {
             alert("true");
         }
     }, 300);
-
+var sendMail = function (body) {
+        window.location.href = "mailto:contact@changethroughcode.com?body=" + body;
+    }; 
 
 
 
     // hide .navbar first
     $(".navbar").hide();
-    var sendMail = function (body) {
-        window.location.href = "mailto:contact@changethroughcode.com?body=" + body;
-    };
 
     // fade in .navbar
     $(function () {
@@ -36,44 +35,7 @@ $(document).ready(function () {
         if (!e) e = window.event;
         var keyCode = e.keyCode || e.which;
         if (keyCode == '13') {
-            sendMail($("#emailform").val());
+            sendMail($('#emailform').val());
         }
     }
-    
-    document.getElementById('questionIn').onkeypress = function (e) {
-        if (!e) e = window.event;
-        var keyCode = e.keyCode || e.which;
-        if (keyCode == '13') {
-            var question = $("#questionIn").val().toLowerCase();
-            if (question.indexOf("when") != -1) {
-                $("#questionAnswer").html("Change Through Code was formed in June 2016...");
-                $("#questionAnswer").fadeIn(800, function () {
-                    $("#incorrectAnswer").animate({
-                        marginTop: 40
-                    }, {
-                        queue: false,
-                        duration: 800
-                    });
-                    $("#incorrectAnswer").html("Aren't satisfied? Email us heres");
-                    $("#incorrectAnswer").fadeIn(1000);
-                });
-            } else {
-                $("#questionAnswer").html("Sorry we don't know how to answer that question. Email us that question below");
-                $("#questionAnswer").fadeIn(800, function () {
-                    $("#incorrectAnswer").animate({
-                        marginTop: 40
-                    }, {
-                        queue: false,
-                        duration: 800
-                    });
-                    $("#incorrectAnswer").html("Email question);
-                    $("#incorrectAnswer").fadeIn(1000);
-                });
-            }
-        }
-    }
-    $("#incorrectAnswer").on("click", function () {
-        sendMail($("#questionIn").val().toLowerCase());
-    })
-
 });
