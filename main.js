@@ -10,7 +10,7 @@ $(document).ready(function () {
         }
     }, 300);
 var sendMail = function (body) {
-        window.location.href = "mailto:contact@changethroughcode.com?body=" + body;
+        window.location.href = "mailto:info@changethroughcode.com?body=" + body;
     }; 
 
 

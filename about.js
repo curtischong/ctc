@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var sendMail = function (body) {
-        window.location.href = "mailto:contact@changethroughcode.com?body=" + body;
+        window.location.href = "mailto:info@changethroughcode.com?body=" + body;
     }; 
    document.getElementById('questionIn').onkeypress = function (e) {
         if (!e) e = window.event;
