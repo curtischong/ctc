@@ -222,7 +222,10 @@ body{
     }
 }
 
-#inquiry{
+#emailcon{
+    height: 400px;
+    background-color: #35DB96;
+}#inquiry{
     height: 400px;
     background-color: #35DB96;
 }

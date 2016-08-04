@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
+<head id="includedContent">
     <title>CTC</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <meta charset="utf-8" />
     <meta name="description" content="Creating Change Through Code">
     <meta name="keywords" content="Jake Xia, Curtis Chong">
@@ -31,42 +29,23 @@
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
 </head>
+
 <body>
-
-    <section class="jumbotron1">
-        <div class="container">
-            <div class="logo">
-                <div class="animated rollIn logoIcon">
-                    <img src="svg/logo.svg" height="150" width="150">
-                </div>
-                <div class="logoText">
-                    <h1><b>Change<br>Through <br>Code</b></h1>
-                </div>
+    <div id="inquiry">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <input type="text" id="emailform" placeholder="Want to know even more? Put it in this box">
             </div>
+        </div>
+        <div class="row">
             <div class="col-sm-12">
-                <p style="text-align:left">We’re activists. Our goal is to bring our city’s problems into light and attract the talent within our communities to resolve those issues.</p>
-            </div>
-
-        </div>
-
-    </section>
-    <section id="emailcon">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-1 col-sm-offset-2">
-                    <i class="fa fa-envelope-o" aria-hidden="true" style="margin-top: 60px;float: right;color: white;"></i>
-                </div>
-                <div class="col-sm-6">
-                    <input type="text" id="emailform" placeholder="Email us here at contact@changethroughcode.com">
-                </div>
+                <div id="questionAnswer"></div>
             </div>
         </div>
-    </section>
-
-
-
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="incorrectAnswer">Aren't satisfied? Email us here</div>
+            </div>
+        </div>
+    </div>
 </body>
-
-
-
-</html>

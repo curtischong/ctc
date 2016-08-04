@@ -15,6 +15,9 @@ $(document).ready(function () {
 
     // hide .navbar first
     $(".navbar").hide();
+    var sendMail = function (body) {
+        window.location.href = "mailto:contact@changethroughcode.com?body=" + body;
+    };
 
     // fade in .navbar
     $(function () {
@@ -33,7 +36,7 @@ $(document).ready(function () {
         if (!e) e = window.event;
         var keyCode = e.keyCode || e.which;
         if (keyCode == '13') {
-            sendMail($('#emailform').val());
+            sendMail($("#emailform").val());
         }
     }
     
@@ -51,18 +54,26 @@ $(document).ready(function () {
                         queue: false,
                         duration: 800
                     });
+                    $("#incorrectAnswer").html("Aren't satisfied? Email us heres");
                     $("#incorrectAnswer").fadeIn(1000);
                 });
             } else {
-                sendMail(question);
+                $("#questionAnswer").html("Sorry we don't know how to answer that question. Email us that question below");
+                $("#questionAnswer").fadeIn(800, function () {
+                    $("#incorrectAnswer").animate({
+                        marginTop: 40
+                    }, {
+                        queue: false,
+                        duration: 800
+                    });
+                    $("#incorrectAnswer").html("Email question);
+                    $("#incorrectAnswer").fadeIn(1000);
+                });
             }
         }
     }
     $("#incorrectAnswer").on("click", function () {
         sendMail($("#questionIn").val().toLowerCase());
     })
-    var sendMail = function (body) {
-        window.location.href = "mailto:mail@example.org?body=" + body;
-    };
 
 });
