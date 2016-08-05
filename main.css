@@ -1,6 +1,7 @@
 body{
     font-family: 'Helvetica', sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
+    background-color: black;
 }
 
 
@@ -8,28 +9,34 @@ body{
     display: flex;
     text-align: center;
     align-items: center;
-    background-image: url("jumbotronBG.png");
+    /*background-image: url("jumbotronBG.png");*/
     background-size: cover;
     background-position: center; 
     color: #ffffff;
-    height: 800px;
+    height: 100%;
+    position: relative;
+    top: 0px;
     
 }
 
-.logo{
+/*.logo{
     float: left;
     margin-left: 40px;
-}
+}*/
 
-.logoIcon{
+/*.logoIcon{
     margin: 10px;
     float: left;
+}*/
+#logoIcon{
+    position: absolute;
+    display: none;
 }
-
-.logoText{
-    margin: 10px;
-    float: left;
-    text-align: left;
+#logoText{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    right: 140px;
 }
 
 .jumbotronStory{
@@ -38,19 +45,19 @@ body{
 
 .navbar-custom .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    background-color: #229922;
+    background-color: #35DB96;
     color: dimgrey;
 }
 
 .navbar-custom {
-    background-color: #229922;
+    background-color: #35DB96;
     color: #ffffff;
     border-radius: 0;
 }
 
 .nav-link:hover {
-    background-color: #229922;
-    color: #229922;
+    background-color: #35DB96;
+    color: #35DB96;
 }
 
 .navbar-custom .navbar-nav > li > a {
@@ -74,7 +81,7 @@ body{
 }
 
 .navbar-header {
-    background-color: #28540A;
+    background-color: #35DB96;
 }
 
 .navbar-toggle {
@@ -114,6 +121,44 @@ body{
 }
 
 
+
+
+/*titlescreen*/
+.tspan{
+    margin-top:0px;
+    font-size: 26px;
+    display: inline;
+    opacity: 0.01;
+    color: white;
+}
+.tsnowflake{
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+/*about*/
+#theTeam{
+    width: 100%;
+    background-color: cornflowerblue;
+}
+
+
+
+
+
+
+
+
+
+
+
 #questionIn{
     width: 100%;
     padding: 5px;
@@ -130,9 +175,9 @@ body{
     outline: none;
 }
 #emailform{
-    width: 100%;
     padding: 5px;
     
+    height: 3500px;
     border: 1px solid #35DB96;
     border-bottom: 1px solid white;
     margin-top: 50px;
@@ -169,7 +214,7 @@ body{
     text-align: center;
     display: none;
     margin-top: 80px;
-    font-size: 23px;
+    font-size: 18px;
 }
 #incorrectAnswer{
     width: 100%;
