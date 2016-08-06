@@ -71,6 +71,9 @@ $(window).on('DOMContentLoaded load resize scroll', handler);
     
     */
 
+
+
+
     $("#homepageFront").css("height", window.innerHeight);
     $("#logoIcon").fadeIn(1600);
     $("#logoIcon").css("top", (window.innerHeight / 2) - 100);
@@ -149,6 +152,9 @@ $(window).on('DOMContentLoaded load resize scroll', handler);
     // hide .navbar first
     $(".navbar").hide();
 
+
+    var emailLoc = $("#emailform").offset().top;
+    console.log(emailLoc);
     // fade in .navbar
     $(function () {
         $(window).scroll(function () {
@@ -159,6 +165,14 @@ $(window).on('DOMContentLoaded load resize scroll', handler);
             } else {
                 $('.navbar').fadeOut();
             }
+
+            if ($(this).scrollTop() > emailLoc-screen.height+180) {
+                $("#emailform").animate({
+                    width: 500,
+                    queue: false
+                }, 1200);
+            }
+
         });
     });
 

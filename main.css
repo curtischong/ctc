@@ -1,7 +1,7 @@
 body{
     font-family: 'Helvetica', sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
-    background-color: black;
+    background-color: white;
 }
 
 
@@ -39,9 +39,6 @@ body{
     right: 140px;
 }
 
-.jumbotronStory{
-     
-}
 
 .navbar-custom .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -134,9 +131,27 @@ body{
 .tsnowflake{
     position: absolute;
 }
+#titleScreen{
+    height: 100%;
+    background-color: black;
+}
 
 
 
+#statement{
+    background-color: white;
+    min-height: 250px;
+}
+#statementp{
+    text-align: center;
+    margin-top: 100px;
+}
+
+#emailCon{
+    background-color: black;
+    min-height: 250px;
+    background-color: #35DB96;
+}
 
 
 
@@ -152,8 +167,11 @@ body{
 
 
 
-
-
+/*stories*/
+#storiesTitle{
+    text-align: center;
+    margin-top: 150px;
+}
 
 
 
@@ -177,7 +195,6 @@ body{
 #emailform{
     padding: 5px;
     
-    height: 3500px;
     border: 1px solid #35DB96;
     border-bottom: 1px solid white;
     margin-top: 50px;
@@ -185,6 +202,7 @@ body{
     color: white;
     background-color: #35DB96;
     text-decoration: none;
+    width: 10px;
 }#emailform:focus {
     outline: none;
 }
@@ -269,11 +287,7 @@ body{
         opacity:1;
     }
 }
-
-#emailcon{
-    height: 400px;
-    background-color: #35DB96;
-}#inquiry{
+#inquiry{
     height: 400px;
     background-color: #35DB96;
 }
