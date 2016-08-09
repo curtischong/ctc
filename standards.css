@@ -2,7 +2,7 @@ h1{
     font-family: 'Helvetica', sans-serif;
     color: white;
     font-weight: 700;
-    font-size: 36px;
+    /*font-size: 36px;*/
 }
 
 h2{
@@ -62,4 +62,35 @@ a{
 a:hover{
     color: #759BAC; 
     text-decoration: none;
+}
+
+/*for responsiveness*/
+@media (min-width: 858px) {
+    span {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 780px) {
+    span{
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 702px) {
+    span{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 724px) {
+    span {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 623px) {
+    span {
+        font-size: 10px;
+    }
 }

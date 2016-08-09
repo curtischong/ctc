@@ -1,7 +1,11 @@
 $(document).ready(function () {
     $("#mainImage").css("height", screen.height - 101);
 
+    if (document.body.clientWidth < 500) {
+        //handle ctc title animation
+        $(".tspan").css("font-size", "21px");
 
+    }
 
     //this will start the starup animation
 
@@ -71,29 +75,7 @@ $(window).on('DOMContentLoaded load resize scroll', handler);
     
     */
 
-
-
-
-    $("#homepageFront").css("height", window.innerHeight);
-    $("#logoIcon").fadeIn(1600);
-    $("#logoIcon").css("top", (window.innerHeight / 2) - 100);
-    $("#logoIcon").css("left", (window.innerWidth / 2) - 50);
-    $("#logoText").css("top", ((window.innerHeight / 2) - 55));
-    //$("#logoText").css("top", ((window.innerHeight/2)-50));
-    setTimeout(function () {
-        $("#logoIcon").animate({
-            left: window.innerWidth / 2 - 200
-        }, {
-            queue: false
-        });
-
-        $("#logoText").animate({
-            right: -10,
-            queue: false
-        }, {
-            queue: false
-        });
-
+    var fadeInCTC = function () {
         $("#t1").fadeTo(1900, 1);
         $("#t2").fadeTo(660, 1);
         $("#t3").fadeTo(500, 1);
@@ -111,31 +93,55 @@ $(window).on('DOMContentLoaded load resize scroll', handler);
         $("#t15").animate({
             top: 500,
             queue: false
-        }, 1200);
+        }, 200);
         $("#t15").fadeTo(1300, 1);
         $("#t16").fadeTo(1200, 1);
         $("#t17").fadeTo(800, 1);
+    };
 
 
-        setTimeout(function () {
+    $("#homepageFront").css("height", window.innerHeight);
+    $("#logoIcon").fadeIn(1600);
+    $("#logoIcon").css("top", (window.innerHeight / 2) - 100);
+    $("#logoIcon").css("left", (window.innerWidth / 2) - 50);
+    $("#logoText").css("top", ((window.innerHeight / 2) - 55));
+    //$("#logoText").css("top", ((window.innerHeight/2)-50));
 
-            /*$("#logoText").animate({
-                top: $("#logoText").offset().top-100
-            }, {
-                queue: false
-            }, 1800);
+    var nameWidth = $("#nameWidth").width();
 
-
+    setTimeout(function () {
+        if (document.body.clientWidth > 500) {
             $("#logoIcon").animate({
-                top: $("#logoIcon").offset().top-100
+                left: window.innerWidth / 2 - nameWidth / 2 - 75
             }, {
                 queue: false
-            }, 1800);*/
-            $("#logoIcon").fadeOut(2500);
-        }, 1200);
+            });
+
+            $("#logoText").animate({
+                right: 0,
+                queue: false
+            }, {
+                queue: false
+            });
+            fadeInCTC();
+
+            setTimeout(function () {
+                $("#logoIcon").fadeOut(2500);
+            }, 1200);
+        }else{
+            setTimeout(function () {
+                $("#logoIcon").fadeOut(2500);
+            }, 600);
+            $("#logoText").css("top", window.innerHeight / 2-50);
+            $("#logoText").css("right",0);
+            fadeInCTC();
+        }
 
     }, 2000);
 
+
+
+    //makes navbar responsive
     setInterval(function () {
 
 
@@ -165,10 +171,13 @@ $(window).on('DOMContentLoaded load resize scroll', handler);
             } else {
                 $('.navbar').fadeOut();
             }
-
-            if ($(this).scrollTop() > emailLoc-screen.height+180) {
+            var emailWidth = 240;
+            if($("#emailCon").width()/2 > 240){
+                emailWidth = $("#emailCon").width()/2;
+            }
+            if ($(this).scrollTop() > emailLoc - screen.height + 180) {
                 $("#emailform").animate({
-                    width: 500,
+                    width: emailWidth,
                     queue: false
                 }, 1200);
             }

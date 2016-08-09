@@ -163,8 +163,26 @@ body{
     width: 100%;
     background-color: cornflowerblue;
 }
-
-
+#questionIn{
+    width: 100%;
+    padding: 5px;
+    
+    border: 1px solid #35DB96;
+    border-bottom: 1px solid white;
+    margin-top: 0px;
+    position: relative;
+    color: white;
+    background-color: #35DB96;
+    text-decoration: none;
+}
+#questionIn:focus {
+    outline: none;
+}
+#aboutMoreInfo{
+    color: white;
+    position: relative;
+    margin-top: 70px;
+}
 
 
 /*stories*/
@@ -177,27 +195,13 @@ body{
 
 
 
-#questionIn{
-    width: 100%;
-    padding: 5px;
-    
-    border: 1px solid #35DB96;
-    border-bottom: 1px solid white;
-    margin-top: 50px;
-    position: relative;
-    color: white;
-    background-color: #35DB96;
-    text-decoration: none;
-}
-#questionIn:focus {
-    outline: none;
-}
+
 #emailform{
     padding: 5px;
     
     border: 1px solid #35DB96;
     border-bottom: 1px solid white;
-    margin-top: 50px;
+    margin-top: -50px;
     position: relative;
     color: white;
     background-color: #35DB96;
@@ -206,7 +210,12 @@ body{
 }#emailform:focus {
     outline: none;
 }
-
+#emailFormp{
+    color: white;
+    margin-top: 50px;
+    margin-left: 5px;
+    position: relative;
+}
 
 
 ::-webkit-input-placeholder {
