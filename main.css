@@ -159,9 +159,17 @@ body{
 
 
 /*about*/
+#aboutIntro{
+    position: relative;
+    height: 300px;
+    background-color: brown;
+}
 #theTeam{
-    width: 100%;
+    top: 0px;
+    min-height: 400px;
+    position: relative;                             
     background-color: cornflowerblue;
+    padding: 30px;
 }
 #questionIn{
     width: 100%;
@@ -183,7 +191,15 @@ body{
     position: relative;
     margin-top: 70px;
 }
-
+.card-img-top{
+    width: 100%;
+}
+.card{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
 
 /*stories*/
 #storiesTitle{
@@ -299,4 +315,5 @@ body{
 #inquiry{
     height: 400px;
     background-color: #35DB96;
+    position: relative;
 }
