@@ -99,4 +99,5 @@ $(document).ready(function () {
     $("#incorrectAnswer").on("click", function () {
         sendMail($("#questionIn").val());
     });
+
 });
