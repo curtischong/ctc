@@ -146,13 +146,49 @@ body{
     text-align: center;
     margin-top: 100px;
 }
+#challenges{
+    background-color: #C7F0ED;
+    /*background-image: url("http://res.cloudinary.com/dfcfsw4mv/image/upload/v1470979220/DSC_0201_lboh2y.jpg");
+    height: 300px;
+    width: 100%;*/
+}
+#currentChallemgeImg{
+/*note I did inline*/
+
+}
+
+#stories{
+    background-color: #DFF5F3;/*I really like this background color*/
+}
+#upcomming{
+    background-color: #449691;
+}
 
 #emailCon{
     background-color: black;
     min-height: 250px;
-    background-color: #35DB96;
+    background-color: #0B6336;
 }
-
+#emailform{
+    padding: 5px;
+    
+    border: 1px solid #0B6336;
+    border-bottom: 1px solid white;
+    margin-top: -50px;
+    position: relative;
+    color: white;
+    background-color: #0B6336;
+    text-decoration: none;
+    width: 10px;
+}#emailform:focus {
+    outline: none;
+}
+#emailFormp{
+    color: white;
+    margin-top: 50px;
+    margin-left: 5px;
+    position: relative;
+}
 
 
 
@@ -164,6 +200,12 @@ body{
     height: 300px;
     background-color: brown;
 }
+#aboutIntroP{
+    text-align: center;
+    margin-top: 160px;
+    color: white;
+    display: none;
+}
 .card-img-top{
     width: 100%;
 }
@@ -173,6 +215,8 @@ body{
     border-radius: 15px;
     position: relative;
     margin-bottom: 30px;
+    margin-top: 40px;
+    display: none;
 }
 
 
@@ -187,12 +231,12 @@ body{
     width: 10px;
     padding: 5px;
     
-    border: 1px solid #35DB96;
+    border: 1px solid #0B6336;
     border-bottom: 1px solid white;
     margin-top: 0px;
     position: relative;
     color: white;
-    background-color: #35DB96;
+    background-color: #0B6336;
     text-decoration: none;
 }
 #questionIn:focus {
@@ -207,7 +251,7 @@ body{
 }
 #inquiry{
     height: 400px;
-    background-color: #35DB96;
+    background-color: #0B6336;
     position: relative;
     padding: none;
     margin: 0px;
@@ -223,28 +267,6 @@ body{
 
 
 
-
-
-#emailform{
-    padding: 5px;
-    
-    border: 1px solid #35DB96;
-    border-bottom: 1px solid white;
-    margin-top: -50px;
-    position: relative;
-    color: white;
-    background-color: #35DB96;
-    text-decoration: none;
-    width: 10px;
-}#emailform:focus {
-    outline: none;
-}
-#emailFormp{
-    color: white;
-    margin-top: 50px;
-    margin-left: 5px;
-    position: relative;
-}
 
 
 ::-webkit-input-placeholder {

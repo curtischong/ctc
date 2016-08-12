@@ -78,7 +78,7 @@ $(document).ready(function () {
                 duration: 500
             });
             console.log(answerArray);
-            if ((answerArray[0] == 0) && (answerArray[1] == 0)&&(answerArray[0] == 0)) {
+            if ((answerArray[0] == 0) && (answerArray[1] == 0) && (answerArray[0] == 0)) {
 
                 $("#incorrectAnswer").fadeOut(400);
                 $("#questionAnswer").fadeOut(400, function () {
@@ -109,23 +109,23 @@ $(document).ready(function () {
         sendMail($("#questionIn").val());
     });
     if (document.body.clientWidth < 500) {
-        $("#theTeam").css("height", $("#curtisCard").height()*2 + 270);
-    }else if(document.body.clientWidth < 800){
-        $("#theTeam").css("height", $("#curtisCard").height()*2 + 270);
-    }else{
+        $("#theTeam").css("height", $("#curtisCard").height() * 2 + 270);
+    } else if (document.body.clientWidth < 800) {
+        $("#theTeam").css("height", $("#curtisCard").height() * 2 + 270);
+    } else {
         $("#theTeam").css("height", $("#curtisCard").height() + 100);
     }
-    
-    
-    
+
+
+
     var emailLoc = $("#questionIn").offset().top;
     // fade in .navbar
     $(function () {
         $(window).scroll(function () {
 
             var emailWidth = 180;
-            if($("#inquiry").width()/2 > 180){
-                emailWidth = $("#inquiry").width()/2;
+            if ($("#inquiry").width() / 2 > 180) {
+                emailWidth = $("#inquiry").width() / 2;
             }
             if ($(this).scrollTop() > emailLoc - screen.height + 180) {
                 $("#questionIn").animate({
@@ -136,8 +136,24 @@ $(document).ready(function () {
 
         });
     });
-    
-    
-    
+    $("#aboutIntroP").fadeIn(700);
+    setInterval(function () {
+        $("#jakeCard").fadeIn(700);
+        $("#jakeCard").animate({
+            marginTop: 0
+        }, {
+            queue: false,
+            duration: 800
+        });
+    }, 900);
+    setInterval(function () {
+        $("#curtisCard").fadeIn(700);
+        $("#curtisCard").animate({
+            marginTop: 0
+        }, {
+            queue: false,
+            duration: 800
+        });
+    }, 1300);
 
 });
