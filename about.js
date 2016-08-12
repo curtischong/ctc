@@ -11,17 +11,17 @@ $(document).ready(function () {
         var max = arr[0];
         var maxIndex = 0;
 
-        for (var b = 0; b < arr.length; b++) {
-            console.log("count"+b)
-            console.log(arr[b]);
-            console.log(max);
+        for (var b = 1; b < arr.length; b++) {
+            //console.log("count" + b)
+            //console.log(arr[b]);
+            //console.log(max);
             if (arr[b] > max) {
                 max = arr[b];
                 maxIndex = b;
-                console.log("hi  " + b);
+                //console.log("hi  " + b);
             }
-            console.log("m"+max)
-            console.log("i"+maxIndex)
+            //console.log("m" + max)
+            //console.log("i" + maxIndex)
         }
         return maxIndex;
     };
@@ -71,23 +71,31 @@ $(document).ready(function () {
             if (question.indexOf("who") != -1) {
                 answerArray[2]++;
             }
-            console.log(answerArray);
-            var sortedArray = answerArray;
-            sortedArray.sort();
-            if (sortedArray[2] == 0) {
-                $("#questionAnswer").html("It seems like we can't find an answer to your question.");
-                $("#questionAnswer").fadeIn(800, function () {
-                    $("#incorrectAnswer").animate({
-                        marginTop: 40
-                    }, {
-                        queue: false,
-                        duration: 800
+            $("#aboutMoreInfo").animate({
+                marginTop: 70
+            }, {
+                queue: false,
+                duration: 500
+            });
+            if ((answerArray[0] == 0) && (answerArray[1] == 0)&&(answerArray[0] == 2)) {
+
+                $("#incorrectAnswer").fadeOut(400);
+                $("#questionAnswer").fadeOut(400, function () {
+                    $("#questionAnswer").html("It seems like we can't find an answer to your question.");
+                    $("#questionAnswer").fadeIn(800, function () {
+                        $("#incorrectAnswer").animate({
+                            marginTop: 40
+                        }, {
+                            queue: false,
+                            duration: 800
+                        });
+                        $("#incorrectAnswer").html("But send us an email here if you want to know more.");
+                        $("#incorrectAnswer").fadeIn(1000);
                     });
-                    $("#incorrectAnswer").html("But send us an email here if you want to know more.");
-                    $("#incorrectAnswer").fadeIn(1000);
                 });
             } else {
-                //console.log(indexOfMax(answerArray));
+                console.log(answerArray);
+                console.log(indexOfMax(answerArray));
                 provideAns(answersArray[indexOfMax(answerArray)]);
             }
         }
@@ -99,5 +107,32 @@ $(document).ready(function () {
     $("#incorrectAnswer").on("click", function () {
         sendMail($("#questionIn").val());
     });
+    if (document.body.clientWidth > 500) {
+        $("#theTeam").css("height", $("#curtisCard").height() + 100);
+    }
+    
+    
+    
+    var emailLoc = $("#questionIn").offset().top;
+    // fade in .navbar
+    $(function () {
+        $(window).scroll(function () {
+
+            var emailWidth = 180;
+            if($("#inquiry").width()/2 > 180){
+                emailWidth = $("#inquiry").width()/2;
+            }
+            if ($(this).scrollTop() > emailLoc - screen.height + 180) {
+                $("#questionIn").animate({
+                    width: emailWidth,
+                    queue: false
+                }, 1200);
+            }
+
+        });
+    });
+    
+    
+    
 
 });
