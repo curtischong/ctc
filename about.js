@@ -77,7 +77,8 @@ $(document).ready(function () {
                 queue: false,
                 duration: 500
             });
-            if ((answerArray[0] == 0) && (answerArray[1] == 0)&&(answerArray[0] == 2)) {
+            console.log(answerArray);
+            if ((answerArray[0] == 0) && (answerArray[1] == 0)&&(answerArray[0] == 0)) {
 
                 $("#incorrectAnswer").fadeOut(400);
                 $("#questionAnswer").fadeOut(400, function () {
