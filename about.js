@@ -108,7 +108,11 @@ $(document).ready(function () {
     $("#incorrectAnswer").on("click", function () {
         sendMail($("#questionIn").val());
     });
-    if (document.body.clientWidth > 500) {
+    if (document.body.clientWidth < 500) {
+        $("#theTeam").css("height", $("#curtisCard").height()*2 + 270);
+    }else if(document.body.clientWidth < 800){
+        $("#theTeam").css("height", $("#curtisCard").height()*2 + 270);
+    }else{
         $("#theTeam").css("height", $("#curtisCard").height() + 100);
     }
     
