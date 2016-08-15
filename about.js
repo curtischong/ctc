@@ -109,7 +109,7 @@ $(document).ready(function () {
         sendMail($("#questionIn").val());
     });
     if (document.body.clientWidth < 500) {
-        $("#theTeam").css("height", $("#curtisCard").height() * 2 + 270);
+        $("#theTeam").css("height", $("#curtisCard").height() * 2 + 380);
     } else if (document.body.clientWidth < 800) {
         $("#theTeam").css("height", $("#curtisCard").height() * 2 + 270);
     } else {
