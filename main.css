@@ -79,11 +79,14 @@ body{
 
 .navbar-header {
     background-color: #35DB96;
+    height: 30px;
 }
 
 .navbar-toggle {
     border: none;
     background: transparent !important;
+    padding-bottom: 0px;
+    padding-top: 3px;
 }
 
 .navbar-toggle .icon-bar {
