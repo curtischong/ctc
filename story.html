@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="standards.css">
     <link rel="stylesheet" type="text/css" href="main.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="parallax.js-1.4.2/parallax.js"></script>
 </head>
 
 <style>
@@ -15,23 +16,14 @@
     
     #header {
         display: flex;
-        height: 400px;
         align-items: center;
-        background-image: url("https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg");
         background-size: cover;
         background-position: center;
-        position: relative;
+        position: absolute;
+        top: 300px;
+        left: 50px;
     }
     
-    #header-title {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        color: white;
-        padding: 25px;
-        margin-left: 25px;
-        margin-right: 25px;
-    }
     
     h1,
     h3 {
@@ -43,19 +35,23 @@
         margin: 25px;
         padding: 25px;
     }
-
+    #bannerPhoto{
+        height: 400px;
+        top: 0px;
+        position: relative;
+        width: 100%;
+    }
 </style>
 
 <body>
     <section id="header">
-        <div class="container">
+
             <div id="header-title">
                 <h1 style="font-size:36px">Title of Story</h1>
                 <h3>12/12/27</h3>
             </div>
-        </div>
     </section>
-
+<div class="parallax-window" id="bannerPhoto" data-parallax="scroll" data-image-src="https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg"></div>
     <div id="text">
         <h3>This is Where the Subheading is</h3>
         <p>This is where the text will reside.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ornare nibh. Pellentesque nec porttitor leo, nec varius sapien. Nulla facilisi. Ut porta lacus pulvinar pharetra volutpat. Aenean in dictum augue. Cras at mi aliquet, tempus massa quis, commodo sapien. Maecenas lectus quam, lobortis at ullamcorper eu, faucibus sed velit. Vestibulum convallis tincidunt nulla, et viverra diam lacinia eget. Donec eleifend dolor a pretium molestie. In eleifend, felis non porta consequat, eros ligula consequat ipsum, nec bibendum tellus libero ullamcorper arcu. Pellentesque quis pellentesque lacus.</p>
