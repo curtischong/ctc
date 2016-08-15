@@ -108,13 +108,13 @@ $(document).ready(function () {
     $("#incorrectAnswer").on("click", function () {
         sendMail($("#questionIn").val());
     });
-    if (document.body.clientWidth < 500) {
+    /*if (document.body.clientWidth < 500) {
         $("#theTeam").css("height", $("#curtisCard").height() * 2 + 380);
     } else if (document.body.clientWidth < 800) {
         $("#theTeam").css("height", $("#curtisCard").height() * 2 + 270);
     } else {
         $("#theTeam").css("height", $("#curtisCard").height() + 100);
-    }
+    }*/
 
 
 
@@ -138,7 +138,7 @@ $(document).ready(function () {
     });
     $("#aboutIntroP").fadeIn(700);
     setInterval(function () {
-        $("#jakeCard").fadeIn(700);
+        $("#jakeCard").fadeTo(700,1);
         $("#jakeCard").animate({
             marginTop: 0
         }, {
@@ -147,7 +147,7 @@ $(document).ready(function () {
         });
     }, 900);
     setInterval(function () {
-        $("#curtisCard").fadeIn(700);
+        $("#curtisCard").fadeTo(700,1);
         $("#curtisCard").animate({
             marginTop: 0
         }, {

@@ -122,7 +122,9 @@ body{
     height: 36px;
 }
 .navbar {min-height:35px !important;}
-
+.container-fluid{
+    padding: 0px;
+}
 
 
 /*titlescreen*/
@@ -221,13 +223,12 @@ body{
     position: relative;
     margin-bottom: 30px;
     margin-top: 40px;
-    display: none;
+    opacity: 0.01;
 }
 
 
 #theTeam{
     top: 0px;
-    min-height: 400px;
     position: relative;                             
     background-color: cornflowerblue;
     padding: 30px;

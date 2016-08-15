@@ -31,63 +31,68 @@
 </head>
 
 <body>
+
     <script src="navbar.js"></script>
-    <section id="aboutIntro">
-        <div class="row-fluid">
-            <div class="col-sm-8 col-sm-offset-2">
-                <p id="aboutIntroP">Learn a bt more about the organization and the ones behind the screen.
-                </p>
+    <div class="container-fluid">
+        <section id="aboutIntro">
+            <div class="row-fluid">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <p id="aboutIntroP">Learn a bt more about the organization and the ones behind the screen.
+                    </p>
+                </div>
             </div>
-        </div>
-    </section>
-    <section id="theTeam">
-        <div class="row-fluid">
-            <div class="col-sm-3 col-sm-offset-3">
-                <div class="card" id="curtisCard">
-                    <img class="card-img-top" src="http://res.cloudinary.com/dfcfsw4mv/image/upload/v1470948825/curtis_profile_pic_rdosrd.jpg" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Curtis Chong</h4>
-                        <p class="card-text">An entrepreneur that accidentally stumbled across programming in his pursuit his ambitions. After a few short months, he found himself staying up until dawn every night to that one edge case in his program. These days you'll find him pulling all-nighters at hackathons, running around town to manage CTC, and publishing applications. Don't forget to say hi when he pops in at the occasional tech meetup and hiking trip.</p>
+        </section>
+    </div>
+    <div>
+        <section id="theTeam">
+            <div class="row-fluid clearfix">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="card" id="curtisCard">
+                        <img class="card-img-top" src="http://res.cloudinary.com/dfcfsw4mv/image/upload/v1470948825/curtis_profile_pic_rdosrd.jpg" alt="Card image cap">
+                        <div class="card-block">
+                            <h4 class="card-title">Curtis Chong</h4>
+                            <p class="card-text">An entrepreneur that accidentally stumbled across programming in his pursuit his ambitions. After a few short months, he found himself staying up until dawn every night to that one edge case in his program. These days you'll find him pulling all-nighters at hackathons, running around town to manage CTC, and publishing applications. Don't forget to say hi when he pops in at the occasional tech meetup and hiking trip.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card" id="jakeCard">
+                        <img class="card-img-top" src="http://res.cloudinary.com/dfcfsw4mv/image/upload/v1470948119/jake_hnuwd6.jpg" alt="Card image cap">
+                        <div class="card-block">
+                            <h4 class="card-title">Jake Xia</h4>
+                            <p class="card-text">Self-taught graphic designer and computer programmer, Jake Xia, first discovered his love for technology when playing with the iPad 2 way back in 2011. He loves working on digital projects and trying new things (like eating grubs in the Amazon). When he isn’t working, he’s catching up on the latest netflix originals or listening to discover weekly on Spotify. Jake’s hobbies include watching tv, editing photos, and alternative rock.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3">
-                <div class="card" id="jakeCard">
-                  <img class="card-img-top" src="http://res.cloudinary.com/dfcfsw4mv/image/upload/v1470948119/jake_hnuwd6.jpg" alt="Card image cap">
-                  <div class="card-block">
-                    <h4 class="card-title">Jake Xia</h4>
-                    <p class="card-text">Self-taught graphic designer and computer programmer, Jake Xia, first discovered his love for technology when playing with the iPad 2 way back in 2011. He loves working on digital projects and trying new things (like eating grubs in the Amazon). When he isn’t working, he’s catching up on the latest netflix originals or listening to discover weekly on Spotify. Jake’s hobbies include watching tv, editing photos, and alternative rock.</p>
-                  </div>
+        </section>
+    </div>
+
+
+
+
+    <div class="container-fluid">
+        <section id="inquiry">
+            <div class="row" style="margin: 0px;">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <h5 id="aboutMoreInfo"><b>Want to know even more? Ask below!</b></h5>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-
-
-
-
-    <section id="inquiry">
-        <div class="row" style="margin: 0px;">
-            <div class="col-sm-6 col-sm-offset-3">
-                <h5 id="aboutMoreInfo"><b>Want to know even more? Ask below!</b></h5>
+            <div class="row" style="margin: 0px;">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <input type="text" id="questionIn" placeholder="Anything about CTC">
+                </div>
             </div>
-        </div>
-        <div class="row" style="margin: 0px;">
-            <div class="col-sm-6 col-sm-offset-3">
-                <input type="text" id="questionIn" placeholder="Anything about CTC">
+            <div class="row" style="margin: 0px;">
+                <div class="col-sm-12">
+                    <div id="questionAnswer"></div>
+                </div>
             </div>
-        </div>
-        <div class="row" style="margin: 0px;">
-            <div class="col-sm-12">
-                <div id="questionAnswer"></div>
+            <div class="row" style="margin: 0px;">
+                <div class="col-sm-12">
+                    <div id="incorrectAnswer">Aren't satisfied? Email us here</div>
+                </div>
             </div>
-        </div>
-        <div class="row"style="margin: 0px;" >
-            <div class="col-sm-12">
-                <div id="incorrectAnswer">Aren't satisfied? Email us here</div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </body>
