@@ -212,9 +212,10 @@ body{
 }
 #aboutIntroP{
     text-align: center;
-    margin-top: 160px;
     color: white;
     display: none;
+    position: relative;
+    top: 150px;
 }
 .card-img-top{
     width: 100%;
