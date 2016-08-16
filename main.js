@@ -94,24 +94,30 @@ $(document).ready(function () {
     var emailLoc = $("#emailform").offset().top;
     console.log(emailLoc);
     // fade in .navbar
+    var shownEmail = false;
     $(function () {
         $(window).scroll(function () {
 
             // set distance user needs to scroll before we start fadeIn
-            if ($(this).scrollTop() > screen.height - 120) {
+            if ($(this).scrollTop() > screen.height) {
                 $('.navbar').fadeIn();
             } else {
-                $('.navbar').fadeOut();
+                //$('.navbar').fadeOut();
             }
             var emailWidth = 240;
-            if($("#emailCon").width()/2 > 240){
+            
+            if($("#emailCon").width()/2 > 240 && shownEmail == false){
                 emailWidth = $("#emailCon").width()/2;
+                $('.navbar').fadeIn();
+                shownEmail = true;
             }
-            if ($(this).scrollTop() > emailLoc - screen.height + 180) {
+            if ($(this).scrollTop() > emailLoc - screen.height + 180 && shownEmail == false) {
                 $("#emailform").animate({
                     width: emailWidth,
                     queue: false
                 }, 1200);
+                shownEmail = true
+                $('.navbar').fadeIn();
             }
 
         });

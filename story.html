@@ -49,7 +49,7 @@
         background-size: cover;
         background-position: center;
         position: absolute;
-        left: 50px;
+        left: 150px;
     }
     
     h1,
@@ -78,6 +78,7 @@
     #storyDate {
         color: white;
     }
+
 </style>
 <script>
     $(document).ready(function() {
@@ -111,8 +112,14 @@
 
             });
         });
-        $("#header").css("top", window.innerHeight-100);
+        $("#header").css("top", window.innerHeight - 200);
+        if (document.body.clientWidth < 500) {
+            $("#header").css("top", window.innerHeight - 100);
+            $("#header").css("left", 10);
+
+        }
     });
+
 </script>
 
 <body>
