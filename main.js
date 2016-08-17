@@ -6,7 +6,7 @@ $(document).ready(function () {
         $(".tspan").css("font-size", "21px");
 
     }
-
+    //$("#introImg").css("height","500");
     var fadeInCTC = function () {
         $("#t1").fadeTo(1900, 1);
         $("#t2").fadeTo(660, 1);
@@ -31,6 +31,7 @@ $(document).ready(function () {
         $("#t17").fadeTo(800, 1);
     };
 
+    $("#introTextP").css("top", window.innerHeight + 130);
 
     $("#homepageFront").css("height", window.innerHeight);
     $("#logoIcon").fadeIn(1600);
@@ -60,18 +61,16 @@ $(document).ready(function () {
             setTimeout(function () {
                 $("#logoIcon").fadeOut(2500);
             }, 1200);
-        }else{
+        } else {
             setTimeout(function () {
                 $("#logoIcon").fadeOut(2500);
             }, 600);
-            $("#logoText").css("top", window.innerHeight / 2-50);
-            $("#logoText").css("right",0);
+            $("#logoText").css("top", window.innerHeight / 2 - 50);
+            $("#logoText").css("right", 0);
             fadeInCTC();
         }
 
     }, 2000);
-
-
 
     //makes navbar responsive
     setInterval(function () {
@@ -94,31 +93,33 @@ $(document).ready(function () {
     var emailLoc = $("#emailform").offset().top;
     console.log(emailLoc);
     // fade in .navbar
-    var shownEmail = false;
     $(function () {
         $(window).scroll(function () {
 
             // set distance user needs to scroll before we start fadeIn
-            if ($(this).scrollTop() > screen.height) {
+            if ($(this).scrollTop() > screen.height - 120) {
                 $('.navbar').fadeIn();
             } else {
-                //$('.navbar').fadeOut();
+                $('.navbar').fadeOut();
+            }
+            
+            
+            if ($(this).scrollTop() > screen.height - 600) {
+
+                $('#introTextP').animate({ top: window.innerHeight+210,opacity: 1}, 'slow');
+                
             }
             var emailWidth = 240;
-            
-            if($("#emailCon").width()/2 > 240 && shownEmail == false){
-                emailWidth = $("#emailCon").width()/2;
-                $('.navbar').fadeIn();
-                shownEmail = true;
+            if ($("#emailCon").width() / 2 > 240) {
+                emailWidth = $("#emailCon").width() / 2;
             }
-            if ($(this).scrollTop() > emailLoc - screen.height + 180 && shownEmail == false) {
+            if ($(this).scrollTop() > emailLoc - screen.height + 180) {
                 $("#emailform").animate({
                     width: emailWidth,
                     queue: false
                 }, 1200);
-                shownEmail = true
-                $('.navbar').fadeIn();
             }
+
 
         });
     });

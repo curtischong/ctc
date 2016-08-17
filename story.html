@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-
-<span></span>
+    <span></span>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="header.js"></script>
 <script src="parallax.js-1.4.2/parallax.js"></script>
 <script src="navbar.js"></script>
 
@@ -13,8 +11,6 @@
     <meta charset="utf-8" />
     <meta name="description" content="Creating Change Through Code">
     <meta name="keywords" content="Jake Xia, Curtis Chong">
-
-    <link rel="stylesheet" type="text/css" href="main.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
@@ -36,49 +32,10 @@
 
     <script src="https://use.fontawesome.com/20016a11b5.js"></script>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="standards.css">
 </head>
 
 <style>
-    body {
-        margin: 0px;
-    }
-    
-    #header {
-        display: flex;
-        align-items: center;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-        left: 150px;
-    }
-    
-    h1,
-    h3 {
-        padding: 0px;
-        margin: 0px;
-    }
-    
-    #text {
-        margin: 25px;
-        padding: 25px;
-    }
-    
-    #bannerPhoto {
-        height: 400px;
-        top: 0px;
-        position: relative;
-        width: 100%;
-    }
-    
-    #storyTitle {
-        font-size: 36px;
-        color: white;
-    }
-    
-    #storyDate {
-        color: white;
-    }
-
 </style>
 <script>
     $(document).ready(function() {
@@ -104,7 +61,7 @@
             $(window).scroll(function() {
 
                 // set distance user needs to scroll before we start fadeIn
-                if ($(this).scrollTop() > $("#bannerPhoto").height()) {
+                if ($(this).scrollTop() > $("#bannerPhoto").height()-600) {
                     $('.navbar').fadeIn();
                 } else {
                     $('.navbar').fadeOut();
@@ -112,18 +69,12 @@
 
             });
         });
-        $("#header").css("top", window.innerHeight - 200);
-        if (document.body.clientWidth < 500) {
-            $("#header").css("top", window.innerHeight - 100);
-            $("#header").css("left", 10);
-
-        }
+        $("#storyHeader").css("top", window.innerHeight-200);
     });
-
 </script>
 
 <body>
-    <section id="header">
+    <section id="storyHeader">
 
         <div id="header-title">
             <h1 id="storyTitle">Title of Story</h1>
@@ -133,7 +84,7 @@
     <div class="parallax-window" id="bannerPhoto" data-parallax="scroll" data-image-src="https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg"></div>
     <div class="container">
         <div class="col-sm-8 col-sm-offset-2">
-            <div id="text">
+            <div id="storyText">
                 <h3>This is Where the Subheading is</h3>
                 <p>This is where the text will reside.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ornare nibh. Pellentesque nec porttitor leo, nec varius sapien. Nulla facilisi. Ut porta lacus pulvinar pharetra volutpat. Aenean in dictum augue. Cras at mi aliquet, tempus massa quis, commodo sapien. Maecenas lectus quam, lobortis at ullamcorper eu, faucibus sed velit. Vestibulum convallis tincidunt nulla, et viverra diam lacinia eget. Donec eleifend dolor a pretium molestie. In eleifend, felis non porta consequat, eros ligula consequat ipsum, nec bibendum tellus libero ullamcorper arcu. Pellentesque quis pellentesque lacus.</p>
                 <p>Quisque convallis molestie viverra. Proin felis justo, aliquam et nibh et, dignissim venenatis tellus. Nulla euismod mi in tempus dapibus. Nunc venenatis scelerisque ex sed vestibulum. Vivamus eget eros ac dolor venenatis tincidunt eu eget dolor. Integer dignissim sapien at rutrum accumsan. Vivamus eros magna, cursus ut nisl eu, venenatis mattis lorem. Suspendisse lacinia quis arcu ut molestie. Maecenas dapibus elementum nunc, aliquam lacinia velit rutrum ut.</p>
