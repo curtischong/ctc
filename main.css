@@ -334,6 +334,10 @@ body{
     text-align: center;
     margin-top: 150px;
 }
+.sTitle{
+    font-size: 30px;
+    opacity: 0.01;
+}
 #storiesIntroP{
     text-align: center;
 }
