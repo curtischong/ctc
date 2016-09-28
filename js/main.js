@@ -1,10 +1,8 @@
 $(document).ready(function () {
     $("#mainImage").css("height", screen.height - 101);
-
     if (document.body.clientWidth < 500) {
         //handle ctc title animation
         $(".tspan").css("font-size", "21px");
-
     }
     //$("#introImg").css("height","500");
     var fadeInCTC = function () {
@@ -32,14 +30,11 @@ $(document).ready(function () {
     };
 
     $("#introTextP").css("top", window.innerHeight + 130);
-
     $("#homepageFront").css("height", window.innerHeight);
     $("#logoIcon").fadeIn(1600);
     $("#logoIcon").css("top", (window.innerHeight / 2) - 100);
     $("#logoIcon").css("left", (window.innerWidth / 2) - 50);
     $("#logoText").css("top", ((window.innerHeight / 2) - 55));
-    //$("#logoText").css("top", ((window.innerHeight/2)-50));
-
     var nameWidth = $("#nameWidth").width();
 
     setTimeout(function () {
@@ -49,7 +44,6 @@ $(document).ready(function () {
             }, {
                 queue: false
             });
-
             $("#logoText").animate({
                 right: 0,
                 queue: false
@@ -57,7 +51,6 @@ $(document).ready(function () {
                 queue: false
             });
             fadeInCTC();
-
             setTimeout(function () {
                 $("#logoIcon").fadeOut(2500);
             }, 1200);
@@ -69,13 +62,10 @@ $(document).ready(function () {
             $("#logoText").css("right", 0);
             fadeInCTC();
         }
-
     }, 2000);
 
     //makes navbar responsive
     setInterval(function () {
-
-
         if ($("#bs-example-navbar-collapse-1").attr("aria-expanded") == true) {
             alert("true");
         }
@@ -84,30 +74,22 @@ $(document).ready(function () {
         window.location.href = "mailto:info@changethroughcode.com?body=" + body;
     };
 
-
-
     // hide .navbar first
     $(".navbar").hide();
-
-
     var emailLoc = $("#emailform").offset().top;
     console.log(emailLoc);
+
     // fade in .navbar
     $(function () {
         $(window).scroll(function () {
-
             // set distance user needs to scroll before we start fadeIn
             if ($(this).scrollTop() > screen.height - 120) {
                 $('.navbar').fadeIn();
             } else {
                 $('.navbar').fadeOut();
             }
-            
-            
             if ($(this).scrollTop() > screen.height - 600) {
-
                 $('#introTextP').animate({ top: window.innerHeight+210,opacity: 1}, 'slow');
-                
             }
             var emailWidth = 240;
             if ($("#emailCon").width() / 2 > 240) {
@@ -119,8 +101,6 @@ $(document).ready(function () {
                     queue: false
                 }, 1200);
             }
-
-
         });
     });
 

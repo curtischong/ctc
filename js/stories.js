@@ -6,5 +6,4 @@ $(document).ready(function(){
     $("#s5").fadeTo(1300, 1);
     $("#s6").fadeTo(2600, 1);
     $("#s7").fadeTo(1200, 1);
-
 });

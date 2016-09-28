@@ -53,41 +53,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/plugin/parallax.js-1.4.2/parallax.js"></script>
     <script src="js/navbar.js"></script>
-    <script>
-        $(document).ready(function() {
-            //makes navbar responsive
-            $("#bannerPhoto").css("height", window.innerHeight)
-            setInterval(function() {
-
-
-                if ($("#bs-example-navbar-collapse-1").attr("aria-expanded") == true) {
-                    alert("true");
-                }
-            }, 300);
-
-
-
-
-            // hide .navbar first
-            $(".navbar").hide();
-
-
-            // fade in .navbar
-            $(function() {
-                $(window).scroll(function() {
-
-                    // set distance user needs to scroll before we start fadeIn
-                    if ($(this).scrollTop() > $("#bannerPhoto").height()-600) {
-                        $('.navbar').fadeIn();
-                    } else {
-                        $('.navbar').fadeOut();
-                    }
-
-                });
-            });
-            $("#storyHeader").css("top", window.innerHeight-200);
-        });
-    </script>
+    <script src="js/story.js"></script>
 </body>
-
 </html>
