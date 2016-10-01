@@ -4,7 +4,6 @@ $(document).ready(function () {
         //handle ctc title animation
         $(".tspan").css("font-size", "21px");
     }
-    //$("#introImg").css("height","500");
     var fadeInCTC = function () {
         $("#t1").fadeTo(1900, 1);
         $("#t2").fadeTo(660, 1);
@@ -29,7 +28,6 @@ $(document).ready(function () {
         $("#t17").fadeTo(800, 1);
     };
 
-    $("#introTextP").css("top", window.innerHeight + 130);
     $("#homepageFront").css("height", window.innerHeight);
     $("#logoIcon").fadeIn(1600);
     $("#logoIcon").css("top", (window.innerHeight / 2) - 100);
@@ -88,8 +86,8 @@ $(document).ready(function () {
             } else {
                 $('.navbar').fadeOut();
             }
-            if ($(this).scrollTop() > screen.height - 600) {
-                $('#introTextP').animate({ top: window.innerHeight+210,opacity: 1}, 'slow');
+            if ($(this).scrollTop() > screen.height - 200) {
+                $('#introTextP').animate({opacity: 1}, 700);
             }
             var emailWidth = 240;
             if ($("#emailCon").width() / 2 > 240) {

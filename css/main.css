@@ -19,12 +19,12 @@ body{
     align-items: center;
     /*background-image: url("jumbotronBG.png");*/
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     color: #ffffff;
     height: 100%;
     position: relative;
     top: 0px;
-    
+
 }
 
 /*.logo{
@@ -128,7 +128,7 @@ body{
     transform: rotate(0);
 }
 .navbar-nav > li > a, .navbar-brand {
-    padding-top:8px !important; 
+    padding-top:8px !important;
     padding-bottom:0 !important;
     height: 36px;
 }
@@ -149,23 +149,36 @@ body{
 .tsnowflake{
     position: absolute;
 }
+.parallax {
+    min-height: 400px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #titleScreen{
     height: 100%;
     background-color: black;
     background-image: url("https://static.pexels.com/photos/112531/nature-landscape-sunset-sky-112531.jpeg");
 }
-
+#contextBox{
+    position: relative;
+    height: 500px;
+    background-image: url('https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg')
+}
 #introImg{
     top: 0px;
     position: relative;
     width: 100%;
 }
 #introTextP{
-    position: absolute;
+    position: relative;
     width: 100%;
     text-align: center;
     color: white;
     opacity: 0.01;
+    top: 250px;
 }
 
 #statement{
@@ -217,7 +230,7 @@ body{
 }
 #emailform{
     padding: 5px;
-    
+
     border: 1px solid #48A872;
     border-bottom: 1px solid white;
     margin-top: -50px;
@@ -272,14 +285,14 @@ body{
 
 #theTeam{
     top: 0px;
-    position: relative;                             
+    position: relative;
     background-color: #ecf0f1;
     padding: 30px;
 }
 #questionIn{
     width: 10px;
     padding: 5px;
-    
+
     border: 1px solid #48A872;
     border-bottom: 1px solid white;
     margin-top: 0px;
@@ -344,13 +357,13 @@ body{
 
 
 /*story*/
-#storyHeader{
+#storyBanner{
     display: flex;
-    align-items: center;
     background-size: cover;
     background-position: center;
-    position: absolute;
-    left: 50px;
+    /*align-items: center;*/
+    position: relative;
+    background-image: url("https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg");
 }
 
 #storyText{
@@ -364,7 +377,10 @@ body{
     position: relative;
     width: 100%;
 }
-
+#headerTitle{
+    position: relative;
+    left: 50px;
+}
 #storyTitle {
     font-size: 36px;
     color: white;
@@ -384,15 +400,15 @@ body{
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: white;  
+   color: white;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: white;  
+   color: white;
 }
 
-:-ms-input-placeholder {  
-   color: white;  
+:-ms-input-placeholder {
+   color: white;
 }
 
 
