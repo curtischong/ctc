@@ -146,7 +146,7 @@ body{
 #contextBox{
     position: relative;
     height: 500px;
-    background-image: url('https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg')
+    background-image: url('http://res.cloudinary.com/dj2eq8czc/image/upload/c_scale,w_1922/v1477461494/wood-nature-walking-dark_vguwpi.jpg');
 }
 #introImg{
     top: 0px;
@@ -160,6 +160,7 @@ body{
     color: white;
     opacity: 0.01;
     top: 250px;
+    font-size: 20px;
 }
 
 #statement{
@@ -201,16 +202,11 @@ body{
     position: relative;
     top: 30px;
 }
-
-
-
 #emailCon{
     position: relative;
     height: 550px;
     background-image: url("http://res.cloudinary.com/dfcfsw4mv/image/upload/v1471928814/Dark_Car_jpqbrb.jpg");
 }
-
-
 
 
 /*about*/
@@ -282,24 +278,38 @@ body{
 /*Issues*/
 #issuesTitle{
     position: absolute;
-    top: 200px;
+    top: 140px;
     text-align: center;
     width: 100%;
-    color: #737373;
+    color: white;
     height: 0px;
 }
 #challengeInfo{
     height: 400px;
-    background-image: url("http://www.neptis.org/sites/default/files/greenbelt/greenbelt_map_1_v_recoloured_1216_1_0.jpg");
+    background-color: #2C3E50;
 }
 #challengeInfoP{
     position: relative;
     margin-top: 180px;
     width: 100%;
     text-align: center;
+    color: white;
 }
 #challengeStatistics{
     height: 800px;
+}
+#theSolutionBackground{
+  height: 400px;
+  background-image: url("http://res.cloudinary.com/dj2eq8czc/image/upload/v1477463983/tulips-tulip-field-fields-87633_sf6a0z.jpg");
+}
+#theSolutionT{
+  text-align: center;
+  position: relative;
+  top: 140px;
+  color: white;
+}
+#issueAnalysis{
+  height: 400px;
 }
 
 /*stories*/
