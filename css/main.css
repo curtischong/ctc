@@ -62,6 +62,16 @@ body{
     color: #eeeeee;
     background-color: white;
 }
+#toggleBtn:hover #top-bar{
+    background-color: #35DB96;
+}
+
+#toggleBtn:hover #middle-bar{
+    background-color: #35DB96;
+}
+#toggleBtn:hover #bottom-bar{
+    background-color: #35DB96;
+}
 
 .navbar-header {
     background-color: black;
@@ -397,6 +407,9 @@ body{
     display: none;
     margin-top: 80px;
     cursor: pointer;
+}
+#incorrectAnswer:hover{
+  color: #35DB96;
 }
 
 

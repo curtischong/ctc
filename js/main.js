@@ -35,6 +35,18 @@ $(document).ready(function () {
     $("#logoText").css("top", ((window.innerHeight / 2) - 55));
     var nameWidth = $("#nameWidth").width();
 
+    //make cards the same height
+    /*var curCardHeight = $("#curtisCard").height();
+    var jakeCardHeight = $("#jakeCard").height();
+    console.log(curCardHeight);
+    console.log(jakeCardHeight)
+    if( curCardHeight > jakeCardHeight){
+      $("#jakeCard").css("height", curCardHeight);
+      console.log("hi")
+    }else if( jakeCardHeight > curCardHeight){
+      $("#curtisCard").css("height", jakeCardHeight);
+    }*/
+
     setTimeout(function () {
         if (document.body.clientWidth > 500) {
             $("#logoIcon").animate({
