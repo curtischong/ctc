@@ -27,19 +27,19 @@ body{
 
 .navbar-custom .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    background-color: #35DB96;
-    color: dimgrey;
+    background-color: black;
+    color: #35DB96;
 }
 
 .navbar-custom {
-    background-color: #35DB96;
+    background-color: black;
     color: #ffffff;
     border-radius: 0;
 }
 
 .nav-link:hover {
-    background-color: #35DB96;
-    color: #35DB96;
+    background-color: black;
+    color: black;
 }
 
 .navbar-custom .navbar-nav > li > a {
@@ -64,7 +64,7 @@ body{
 }
 
 .navbar-header {
-    background-color: #35DB96;
+    background-color: black;
     height: 30px;
 }
 
@@ -111,7 +111,7 @@ body{
     height: 36px;
     position: relative;
     cursor: pointer;
-    width: 80px;
+    width: 130px;
 }
 .navbar {min-height:35px !important;}
 .container-fluid{
@@ -284,18 +284,18 @@ body{
     color: white;
     height: 0px;
 }
-#challengeInfo{
+#issueInfo{
     height: 400px;
     background-color: #2C3E50;
 }
-#challengeInfoP{
+#issueInfoP{
     position: relative;
     margin-top: 180px;
     width: 100%;
     text-align: center;
     color: white;
 }
-#challengeStatistics{
+#issueStatistics{
     height: 800px;
 }
 #theSolutionBackground{
